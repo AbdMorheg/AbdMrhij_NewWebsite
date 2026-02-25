@@ -1,0 +1,882 @@
+@import url("https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Playwrite+NZ+Basic&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+:root {
+  --main-color: rgb(243, 216, 184);
+}
+
+body {
+  font-family: cairo;
+  direction: rtl;
+  height: 3500px;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Small Screen */
+@media (max-width: 768px) {
+  .container {
+    width: 100%;
+  }
+}
+
+/* Meduim Screen */
+@media (min-width: 768px) and (max-width: 992px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Large Screen */
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Extra Large Screen */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* Start header styles */
+
+header {
+  background-color: rgb(239, 230, 219);
+  height: 70px;
+  border: 1px solid black;
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+header .container img {
+  width: 50px;
+}
+
+header .container nav {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  header .container nav {
+    /* اتحاه الصفحة من اليسار الى اليمين عند اضافة الخاصية سوف يتجه عنصر  الى اقصى اليكيم  */
+    justify-content: end;
+  }
+}
+
+header .container nav ul {
+  display: flex;
+}
+
+@media (max-width: 768px) {
+  header .container nav ul {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-tog {
+    display: none;
+  }
+}
+
+.nav-tog:hover + ul {
+  /* flex عطيت خاصية مشان اقدر اتحكم باتجاه العناصر واظهارها */
+  display: flex;
+  flex-direction: column;
+  /* هلا بعطي القائمة موقع مطلق لاتحك بعرض النعاصر لانها طلعت برا الارتغ فاع الخاص بالترويسة */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transition: 0.3s;
+}
+
+header .container nav ul li a {
+  /* تم اعطاء خاصية بلوك لتطبيق خواص الارتفاع والعرض والمباعدة */
+  display: block;
+  padding: 20px 10px;
+  font-size: 16px;
+  font-weight: 700;
+  color: black;
+  transition: 0.3s;
+}
+
+@media (max-width: 768px) {
+  header .container nav ul li a {
+    border-bottom: 1px solid black;
+  }
+}
+
+header .container nav ul li a.active,
+header .container nav ul li a:hover {
+  color: white;
+  background-color: var(--main-color);
+}
+
+header .container .social {
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (max-width: 768px) {
+  header .container .social {
+    display: none;
+  }
+}
+
+header.container .social i {
+  margin: 5px;
+  font-size: 17px;
+  background-color: var(--main-color);
+  display: flex;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+header .container .social i:hover {
+  background-color: #d4ab32;
+  scale: 1.1; /*يقوم بزيادة الحجم من كل الاطراف*/
+}
+
+/* End header styles */
+
+/* Start Hero section  */
+
+.hero {
+  background-image: url("../images/background.jpg");
+  /* رح ياخد ارتفاع المتصفح المتصفح بشكل لكامل بمعنى اذا فاتح المتصفح كلشي شايفو قدامي رح ي*/
+  /* رح نشوف انو رح يصير عنا سكرول نتيجة انو في للناف بار ارتفاع ة وقدره 60 بكسل لهيك اللي علينا انو ننقصها من حجم الفيو كلو بيمشي الحال */
+  /* height: calc(60vh - 70px); */
+}
+
+@media (max-width: 768px) {
+  .hero {
+    /* height: calc(100vh - 70px); */
+  }
+}
+
+.hero .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media (max-width: 768px) {
+  .hero .container {
+    flex-direction: column-reverse;
+  }
+}
+
+.hero .container .hero-img img {
+  width: 500px;
+}
+
+@media (max-width: 768px) {
+  .hero .container .hero-img img {
+    width: 400px;
+  }
+}
+
+.hero .container .hero-title {
+  color: var(--main-color);
+  font-size: 50px;
+  font-family: almarai;
+  font-weight: 800px;
+}
+
+.hero .container .hero-info h2 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.hero .container .hero-info p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+  width: 90%;
+}
+
+@media (max-width: 768px) {
+  .hero .container .hero-title {
+    font-size: 35px;
+    text-align: center;
+  }
+  .hero .container .hero-info h2 {
+    font-size: 25px;
+    text-align: center;
+  }
+  .hero .container .hero-info p {
+    font-size: 15px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.hero .container .social {
+  display: flex;
+}
+
+.hero .container .social i {
+  margin: 5px;
+  font-size: 17px;
+  background-color: var(--main-color);
+  display: flex;
+  width: 35px;
+  height: 35px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .hero .container .social {
+    justify-content: center;
+  }
+}
+.hero .container .hero-info .call {
+  display: flex;
+  justify-content: start;
+}
+
+@media (max-width: 768px) {
+  .hero .container .hero-info .call {
+    justify-content: center;
+  }
+}
+
+.hero .container .hero-info .call button {
+  background-color: var(--main-color);
+  padding: 10px 20px;
+  margin: 4px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.hero .container .hero-info .call button:hover {
+  cursor: pointer;
+  scale: 1.1;
+}
+
+/* End Hero section  */
+
+/* Start Services section  */
+
+.Services {
+  background-color: rgb(234, 229, 227);
+  padding: 50px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 30px;
+  color: rgb(227, 183, 126);
+  margin-bottom: 15px;
+}
+.section-desc {
+  text-align: center;
+  font-size: 20px;
+  color: rgb(33, 31, 29);
+  margin-bottom: 25px;
+}
+
+.all-services {
+  display: grid;
+  /* البارمتر الأول عبارة عن عدد الاعمدة والبارمتر الثاني عرض كل عمود */
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.all-services .service {
+  background-color: aliceblue;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 0 10px #ccc;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.4s;
+  position: relative;
+  /* هي الخاصية رح نضيفها مشان اي شي بيطلع برا حدود الاب منخفيه */
+  overflow: hidden;
+}
+
+.all-services .service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: black;
+  transition: 0.5s;
+}
+
+.all-services .service::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 2px;
+  height: 0;
+  background-color: black;
+  transition: 0.5s;
+}
+.all-services .service::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: black;
+}
+.all-services .service:hover::before {
+  height: 100%;
+}
+.all-services .service:hover::after {
+  height: 100%;
+}
+.all-services .service:hover {
+  /* scale: 1.03; */
+  transform: translatey(-15px);
+}
+
+.all-services .service img {
+  width: 70px;
+  margin-bottom: 15px;
+}
+
+.all-services .service h3 {
+  margin-bottom: 15px;
+}
+
+.all-services .service p {
+  line-height: 1.6;
+}
+
+/* End Servicese section  */
+
+/* start About Us section  */
+
+.about-us {
+  padding: 50px 0px;
+}
+
+.about-us .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.about-info,
+.about-img {
+  width: 50%;
+}
+
+.about-us h2 {
+  font-size: 30px;
+  color: rgb(227, 183, 126);
+  margin-bottom: 20px;
+}
+
+.about-us p {
+  font-size: 17px;
+  line-height: 1.7;
+  width: 90%;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-us .container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-info,
+  .about-img {
+    width: 100%;
+  }
+  .about-us p {
+    width: 100%;
+  }
+  .about-us .about-call {
+    margin-bottom: 25px;
+  }
+}
+
+.about-us .about-call {
+  background-color: rgb(227, 183, 126);
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.about-us .about-call::before {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0%;
+  left: 0;
+  top: 0;
+  background-color: rgb(174, 123, 46);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.about-us .about-call::after {
+  content: "";
+  position: absolute;
+  width: 2px;
+  height: 0%;
+  bottom: 0;
+  right: 0;
+  background-color: rgb(197, 153, 89);
+  transition: 0.5s;
+  z-index: -1;
+}
+
+.about-us .about-call:hover::before {
+  width: 50%;
+  height: 100%;
+}
+
+.about-us .about-call:hover::after {
+  width: 50%;
+  height: 100%;
+}
+
+.about-us .about-img {
+  background-color: antiquewhite;
+}
+
+.about-us .about-img img {
+  width: 100%;
+  transform: translate(-10px, -10px);
+}
+
+/* End About Us section  */
+
+/* Start  Statistcs  section   */
+
+.Statistcs {
+  padding: 70px 0px;
+  background-image: url("../images/svg/st-bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+}
+
+.Statistcs .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.537);
+}
+
+.Statistcs .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.Statistcs .container .stat {
+  background-color: aliceblue;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  height: 150px;
+  transition: 0.4s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.Statistcs .container .stat:hover {
+  scale: 1.1;
+}
+
+.Statistcs .container .stat h3 {
+  font-size: 35px;
+  margin-bottom: 15px;
+}
+
+.Statistcs .container .stat p {
+  font-size: 29px;
+  font-weight: 700px;
+}
+
+/* End  Statistcs  section  */
+
+/* Start  Courses  section */
+
+.courses {
+  padding: 50px 0;
+  background-color: rgb(231, 229, 222);
+}
+
+.courses .all-courses {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.courses .all-courses .course {
+  background-color: white;
+  padding-bottom: 20 px;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: 0.4s;
+  position: relative;
+  /*  تم اعطاء خاصية الاخفاء لان الصورة ضمن الكارد قد خرجت عن حدوده ولم تأخذ خاصة دوران الحواف*/
+  overflow: hidden;
+}
+
+.courses .all-courses .course:hover {
+  transform: scale(1.05);
+}
+
+.courses .all-courses .course img {
+  width: 100%;
+}
+
+.courses .all-courses .course .course-title {
+  color: rgb(197, 153, 89);
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.courses .all-courses .course p {
+  color: rgb(69, 68, 68);
+  line-height: 1.7;
+  margin-bottom: 15px;
+  padding: 0 10px;
+}
+
+.course-price {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 0 10px;
+}
+
+.course-price div :last-child {
+  color: rgb(182, 122, 31);
+  font-weight: 800px;
+  text-decoration: line-through;
+}
+
+.course-price :last-child {
+  font-weight: 800px;
+  font-size: 23px;
+}
+
+hr {
+  width: 80%;
+  transform: translateX(-10%);
+  margin-bottom: 15px;
+  border: none;
+  height: 1px;
+  background-color: #eee;
+}
+
+.course-details {
+  background-color: var(--main-color);
+  padding: 15px 20px;
+  margin: 4px;
+  border: none;
+  border-radius: 5px;
+  transition: 0.3s;
+  margin-bottom: 10px;
+  width: 90%;
+  cursor: pointer;
+}
+.category {
+  position: absolute;
+  left: 4px;
+  top: 4px;
+  padding: 8px 8px;
+  border-radius: 5px;
+  background-color: rgb(197, 153, 89);
+}
+
+.course-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 15px;
+}
+
+.course-info i {
+  margin-left: 10px;
+}
+
+.reviews i {
+  color: rgb(197, 153, 89);
+}
+
+/* End  Courses  section */
+
+/* Start Portofolio section  */
+
+.portfolio {
+  padding: 70px 0;
+}
+
+.port-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.box {
+  text-align: center;
+  border: 1px solid #ccc;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.box img {
+  max-width: 100%;
+}
+
+.port-container .box .info {
+  background-color: rgba(2, 0, 0, 0.464);
+  padding: 15px 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  transition: 0.6s;
+}
+
+.port-container .box:hover .info {
+  left: 0;
+}
+
+.port-container .box .info h3 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+/* End  Portofolio  section */
+
+/* Start  Team  section   */
+
+.our-team {
+  background-color: white;
+  padding: 70px 0;
+}
+
+.team-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 15px;
+}
+
+.team-box {
+  background-color: #faf5f5;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.team-box:hover {
+  transform: translateY(-10px);
+}
+
+.team-box:hover img {
+  filter: contrast(100%);
+}
+
+.img-social {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img-social .social {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-right: 5px;
+  padding-top: 10px;
+}
+
+.img-social .social i {
+  margin: 5px;
+  font-size: 20px;
+  width: 35px;
+  height: 35px;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  color: #332e1d;
+  cursor: pointer;
+  transition: 0.4s;
+}
+
+.img-social .social i:hover {
+  background-color: #b3ac96;
+}
+
+.img-social img {
+  width: 80%;
+  border-radius: 0 0 10px 0;
+}
+
+.team-info {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 15px;
+}
+
+.team-info h3 {
+  color: rgb(189, 139, 48);
+  margin-bottom: 8px;
+}
+
+/* End  Team  section  */
+
+/* Start  Skills  section */
+
+.our-skills {
+  padding: 70px 0;
+  background-image: url('../images/background.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.our-skills .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.skills-info,
+.skills-img {
+  width: 45%;
+}
+
+@media (max-width: 768px) {
+  .our-skills .container {
+    flex-direction: column;
+  }
+  .skills-info,
+  .skills-img {
+    width: 100%;
+  }
+}
+
+.our-skills .container .skills-img img {
+  width: 100%;
+  border-radius: 10px;
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.our-skills .container .skills-img img:hover {
+  scale: 1.04;
+}
+
+.skills-info .skill .count {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.skills-info .skill .count :last-child {
+  color: #c29e34;
+  border-radius: 5px;
+  border: 1px solid rgb(231, 229, 229);
+  padding: 2px 3px;
+}
+
+.progress .prog {
+  width: 100%;
+  height: 30px;
+  background-color: var(--main-color);
+  border-radius: 5px;
+  margin-top: 10px;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 15px;
+}
+.progress .prog span {
+  position: absolute;
+  height: 100%;
+  background-color: rgb(247, 207, 78);
+  transition: 0.4s;
+  cursor: pointer;
+}
+
+.progress .prog span:hover {
+  width: 100% !important;
+}
+
+.our-skills .section-desc {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 64%;
+}
+
+/* End  Skills  section */
