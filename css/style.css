@@ -12,12 +12,12 @@ a {
 
 :root {
   --main-color: rgb(243, 216, 184);
+  --second-color: rgb(235, 180, 79);
 }
 
 body {
   font-family: cairo;
   direction: rtl;
-  height: 3500px;
 }
 
 html {
@@ -69,6 +69,7 @@ header {
   background-color: rgb(239, 230, 219);
   height: 70px;
   border: 1px solid black;
+  position: sticky;
 }
 header .container {
   display: flex;
@@ -111,9 +112,12 @@ header .container nav ul {
   }
 }
 
-.nav-tog:hover + ul {
+/* .nav-tog:hover + ul {
+} */
+
+.mobile-nav1 {
   /* flex عطيت خاصية مشان اقدر اتحكم باتجاه العناصر واظهارها */
-  display: flex;
+  display: flex !important;
   flex-direction: column;
   /* هلا بعطي القائمة موقع مطلق لاتحك بعرض النعاصر لانها طلعت برا الارتغ فاع الخاص بالترويسة */
   position: absolute;
@@ -121,6 +125,7 @@ header .container nav ul {
   left: 0;
   width: 100%;
   transition: 0.3s;
+  background-color: #fffdfd;
 }
 
 header .container nav ul li a {
@@ -798,7 +803,7 @@ hr {
 
 .our-skills {
   padding: 70px 0;
-  background-image: url('../images/background.jpg');
+  background-image: url("../images/background.jpg");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -880,3 +885,340 @@ hr {
 }
 
 /* End  Skills  section */
+/* Start  Pricing  section */
+
+.pricing {
+  padding: 70px 0px;
+  background-color: #eee;
+}
+
+.pricing .section-desc {
+  text-align: center;
+}
+
+.pricing .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.pricing .container .plan img {
+  width: 150px;
+}
+
+.plan {
+  background-color: white;
+  text-align: center;
+  padding: 25px 0px;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.4s;
+}
+.plan:hover {
+  scale: 1.05;
+}
+.plan:nth-child(even)::before {
+  content: "عرض خاص";
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 200px;
+  height: 40px;
+  background-color: rgb(235, 239, 158);
+  top: 17px;
+  left: -70px;
+  transform: rotate(-45deg);
+  z-index: -1;
+}
+
+.plan .plan-title {
+  font-size: 23px;
+  color: rgb(235, 180, 79);
+  margin-top: 20px;
+}
+.plan .price p:first-child {
+  color: rgb(235, 180, 79);
+  font-size: 28px;
+  font-weight: bold;
+}
+.plan .price p:last-child {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.plan ul {
+  text-align: right;
+  padding: 15px;
+}
+.plan ul li {
+  padding: 15px;
+  padding-right: 20px;
+  border-top: 1px solid #eee;
+  cursor: pointer;
+  transition: 0.3s;
+  position: relative;
+}
+
+.plan ul li::before {
+  position: absolute;
+  /* لتطبيق اي سهم او اي شارة داخل محتوى يجيب تضمين نوع خط font awesome 5 Free */
+  content: "\f0d9";
+  font-family: "font awesome 5 Free";
+  font-weight: 900;
+  /* width: 5px;
+  height: 5px; */
+  top: 50%;
+  transform: translateY(-50%);
+  right: 5px;
+  color: rgb(173, 149, 17);
+}
+
+.plan ul li:hover {
+  background-color: #eee;
+}
+
+.plan-btn {
+  background-color: var(--main-color);
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  width: 90%;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.plan-btn:hover {
+  scale: 1.05;
+}
+
+/* End  Skills  section */
+
+/* Start  Testimonials  section */
+
+.testimonials {
+  padding: 70px 0;
+}
+
+.testimonials .section-desc {
+  width: 75%;
+  text-align: center;
+  margin: 0 12%;
+  margin-bottom: 25px;
+}
+
+.testimonials .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(335px, 1fr));
+  gap: 20px;
+}
+
+.testimonials .container .testimonial {
+  background-color: #eee;
+  position: relative;
+  padding: 20px;
+  border-radius: 5px;
+  transition: 0.4s;
+}
+
+.testimonials .container .testimonial:hover {
+  transform: translateY(-5px);
+}
+
+.testimonials .container .testimonial::before {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: 0;
+  width: 3px;
+  height: 0%;
+  background-color: var(--second-color);
+  transition: 0.4s;
+}
+.testimonials .container .testimonial:hover::before {
+  height: 50%;
+}
+
+.testimonials .container .testimonial::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 0;
+  width: 3px;
+  height: 0%;
+  background-color: var(--second-color);
+  transition: 0.4s;
+}
+.testimonials .container .testimonial:hover::after {
+  height: 50%;
+}
+
+.testimonials .container .testimonial img {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  top: -15px;
+  left: -10px;
+  border: 5px solid white;
+}
+
+.testimonials .container .testimonial h3 {
+  color: var(--second-color);
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.testimonials .container .testimonial .title-testimonials {
+  margin-bottom: 20px;
+}
+.testimonials .container .testimonial .stars {
+  margin-bottom: 15px;
+}
+
+.testimonials .container .testimonial .stars .fa-solid {
+  color: var(--second-color);
+}
+
+.testimonials .container .testimonial .review {
+  font-size: 16px;
+  line-height: 1.6;
+}
+/* End  Testimonials  section */
+
+/* Start  Footer  section */
+
+footer {
+  padding: 60px 0;
+  background-color: rgb(54, 53, 53);
+  background-image: url("../images/footerbg.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 5px;
+  border-top: 5px solid var(--second-color);
+}
+
+footer .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+footer .container .section h2 {
+  color: white;
+}
+
+@media (max-width: 768px) {
+  footer .container .section {
+    padding-right: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+footer .container .section p {
+  color: white;
+  margin-top: 15px;
+  line-height: 1.8;
+  width: 90%;
+}
+
+footer .container .section a {
+  color: white;
+  display: block;
+  margin-top: 15px;
+  transition: 0.4s;
+  position: relative;
+  cursor: pointer;
+}
+
+footer .container .section a::before {
+  position: absolute;
+  content: "\f0d9";
+  font-family: "font awesome 5 Free";
+  font-weight: 900;
+  color: var(--second-color);
+  top: 50%;
+  right: -15px;
+  font-size: 12px;
+  transform: translateY(-50%);
+}
+
+footer .container .section a:hover {
+  color: var(--second-color);
+  padding-right: 5px;
+  font-weight: bold;
+}
+
+.letter form {
+  display: flex;
+  flex-direction: column;
+  margin: 15px;
+}
+
+.letter form input[type="text"],
+.letter form input[type="email"] {
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  caret-color: var(--second-color);
+}
+.letter form input[type="text"]:focus,
+.letter form input[type="email"]:focus {
+  outline: none;
+  border: 1px solid var(--second-color);
+}
+
+.letter form input[type="submit"] {
+  background-color: var(--second-color);
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.letter form input[type="submit"]:hover {
+  background-color: #f0d478;
+  border: 1px solid black;
+}
+
+.hr-footer {
+  width: 70%;
+  margin-top: 35px;
+  transform: translateX(-17%);
+}
+
+.copyright {
+  color: white;
+  margin-top: 15px;
+  text-align: center;
+}
+
+/* End  Footer  section */
+
+.btn-whatsapp {
+  position: fixed;
+  bottom: 30px;
+  left: 30px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.3s;
+  box-shadow: 0 0 3px #eee;
+}
+
+.btn-whatsapp:hover {
+  scale: 1.1;
+}
+
+.btn-whatsapp i {
+  font-size: 30px;
+}

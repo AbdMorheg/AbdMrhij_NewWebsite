@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
+
   <body>
     <header>
       <div class="container">
@@ -21,13 +22,13 @@
           <img src="images/logo1.png" alt="" />
         </a>
         <nav>
-          <i class="fa-solid fa-bars nav-tog"></i>
-          <ul>
-            <li><a href="">الرئيسية</a></li>
-            <li><a href="">خدماتنا</a></li>
+          <i id="icon-mobile" class="fa-solid fa-bars nav-tog"></i>
+          <ul id="ul-mobile">
+            <li><a class="active" href="/">الرئيسية</a></li>
+            <li><a href="#services">خدماتنا</a></li>
             <li><a href="">المدونة</a></li>
-            <li><a href="">معرض الأعمال</a></li>
-            <li><a href="">اتصل بنا</a></li>
+            <li><a href="#portfolios">معرض الأعمال</a></li>
+            <li><a href="CAllus">اتصل بنا</a></li>
           </ul>
         </nav>
         <div class="social">
@@ -72,7 +73,7 @@
     <!-- End Hero section -->
 
     <!-- Start Services section  -->
-    <section class="Services">
+    <section id="services" class="Services">
       <div class="container">
         <h2 class="section-title">خدماتنا الاحترافية</h2>
         <p class="section-desc">
@@ -327,7 +328,7 @@
 
     <!-- Start Portofolio    section  -->
 
-    <section class="portfolio">
+    <section id="portfolios" class="portfolio">
       <div class="container">
         <h2 class="section-title">معرض الأعمال</h2>
         <p class="section-desc">
@@ -494,10 +495,13 @@
                 <i class="fa-brands fa-youtube"></i>
                 <i class="fa-brands fa-linkedin"></i>
               </div>
-              <img src="images/team/young-asian-programmer-working-at-office-photo.jpg" alt="member" />
+              <img
+                src="images/team/young-asian-programmer-working-at-office-photo.jpg"
+                alt="member"
+              />
             </div>
             <div class="team-info">
-              <h3>منتجب  النمر</h3>
+              <h3>منتجب النمر</h3>
               <p>مطور فرونت إند</p>
             </div>
           </div>
@@ -541,7 +545,7 @@
 
     <section class="our-skills">
       <h2 class="section-title">المهارات الشخصية</h2>
-      <p  class="section-desc">
+      <p class="section-desc">
         كمطور واجهات أمامية، لا يقتصر دورك على كتابة الأكواد البرمجية فقط، بل
         أنت حلقة الوصل بين التصميم والتقنية، وبين فريق العمل والمستخدم النهائي.
         لذلك، المهارات الشخصية لا تقل أهمية عن إتقانك للغات البرمجة مثل HTML
@@ -605,5 +609,250 @@
     </section>
 
     <!-- End  Skills  section  -->
+
+    <!-- Start  Pricing  section  -->
+
+    <section class="pricing">
+      <h2 class="section-title">خطط الأسعار</h2>
+      <p class="section-desc">
+        نحن نؤمن بأن الجودة العالية يجب أن تكون في متناول الجميع، لذلك حرصنا على
+        تقديم قيمة حقيقية مقابل كل خطة، مع مزايا تصاعدية تضة
+      </p>
+      <div class="container">
+        <div class="plan">
+          <h3 class="plan-title">الخطة الاحترافية</h3>
+          <img src="images/svg/react-2.svg" alt="plann" />
+          <div class="price">
+            <p>150$</p>
+            <p>سنويا</p>
+          </div>
+          <ul>
+            <li>عدد غير محدود من الفيديوهات</li>
+            <li>صور احترافية</li>
+            <li>حملات تسويقية</li>
+          </ul>
+          <button class="plan-btn">اشترك الآن</button>
+        </div>
+
+        <div class="plan">
+          <h3 class="plan-title">الخطة الاحترافية</h3>
+          <img src="images/svg/react-2.svg" alt="plann" />
+          <div class="price">
+            <p>150$</p>
+            <p>سنويا</p>
+          </div>
+          <ul>
+            <li>عدد غير محدود من الفيديوهات</li>
+            <li>صور احترافية</li>
+            <li>حملات تسويقية</li>
+          </ul>
+          <button class="plan-btn">اشترك الآن</button>
+        </div>
+
+        <div class="plan">
+          <h3 class="plan-title">الخطة الاحترافية</h3>
+          <img src="images/svg/react-2.svg" alt="plann" />
+          <div class="price">
+            <p>150$</p>
+            <p>سنويا</p>
+          </div>
+          <ul>
+            <li>عدد غير محدود من الفيديوهات</li>
+            <li>صور احترافية</li>
+            <li>حملات تسويقية</li>
+          </ul>
+          <button class="plan-btn">اشترك الآن</button>
+        </div>
+
+        <div class="plan">
+          <h3 class="plan-title">الخطة الاحترافية</h3>
+          <img src="images/svg/react-2.svg" alt="plann" />
+          <div class="price">
+            <p>150$</p>
+            <p>سنويا</p>
+          </div>
+          <ul>
+            <li>عدد غير محدود من الفيديوهات</li>
+            <li>صور احترافية</li>
+            <li>حملات تسويقية</li>
+          </ul>
+          <button class="plan-btn">اشترك الآن</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- End  Pricing  section  -->
+
+    <!-- Start  Testimonials  section  -->
+
+    <section class="testimonials">
+      <h2 class="section-title">آراء العملاء</h2>
+      <p class="section-desc">
+        في عالم الأعمال اليوم، لم تعد آراء العملاء مجرد كلمات عابرة، بل أصبحت
+        البوصلة التي توجه الشركات نحو النجاح والتطور. إنها صوت العميل الذي يحمل
+        في طياته تقييمًا صادقًا لتجاربه مع المنتج أو الخدمة.
+      </p>
+      <div class="container">
+        <div class="testimonial">
+          <img src="images/testimonials/testi1.png" alt="testimonials" />
+          <h3>محمد كامل</h3>
+          <p class="title-testimonials">مطور برمجيات</p>
+          <div class="stars">
+            <span> <i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+            <span> <i class="fa-regular fa-star"></i></span>
+          </div>
+          <p class="review">
+            "منذ أن بدأنا استخدام هذا النظام، تنظيم الفريق أصبح أسهل بكثير.
+            خاصية تعيين المهام ومتابعتها ورفع الملفات كلها في مكان واحد وفّرت
+            علينا وقت اجتماعات لا نهائي. يستحق كل نجمة."
+          </p>
+        </div>
+        <div class="testimonial">
+          <img src="images/testimonials/testi1.png" alt="testimonials" />
+          <h3>أحمد مرهج</h3>
+          <p class="title-testimonials">مطور برمجيات</p>
+          <div class="stars">
+            <span> <i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span> <i class="fa-regular fa-star"></i></span>
+          </div>
+          <p class="review">
+            "تجربة تصفح ممتازة على كل الأجهزة. الموقع ما يعلق، والصور تتحمل
+            بسرعة حتى مع النت الضعيف. عملية الدفع مريحة ومأمونة، وصلني المنتج في
+            أسرع وقت.
+          </p>
+        </div>
+        <div class="testimonial">
+          <img src="images/testimonials/testi1.png" alt="testimonials" />
+          <h3>محمد العامري</h3>
+          <p class="title-testimonials">مطور برمجيات</p>
+          <div class="stars">
+            <span> <i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+            <span> <i class="fa-regular fa-star"></i></span>
+          </div>
+          <p class="review">
+            "صوتيات الفيديو وجودة البث عالية جداً. الواجهة تشجعك على التعلم
+            والمتابعة. أحب خاصية تتبع تقدمي في الدروس وحصولي على الشارات عند
+            الإنجاز
+          </p>
+        </div>
+        <div class="testimonial">
+          <img src="images/testimonials/testi1.png" alt="testimonials" />
+          <h3>لطيف كامل</h3>
+          <p class="title-testimonials">مطور برمجيات</p>
+          <div class="stars">
+            <span> <i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+            <span> <i class="fa-regular fa-star"></i></span>
+          </div>
+          <p class="review">
+            "التطبيق رائع ومميز في فكرة التنظيم. لكن ينقصني خاصية مهمة وهي
+            إمكانية إضافة رسومات أو تعليقات صوتية للملاحظات. إذا أضفتوها بيصير
+            لا يعلى عليه
+          </p>
+        </div>
+        <div class="testimonial">
+          <img src="images/testimonials/testi1.png" alt="testimonials" />
+          <h3>سعيد أحمد</h3>
+          <p class="title-testimonials">مطور برمجيات</p>
+          <div class="stars">
+            <span> <i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span> <i class="fa-regular fa-star"></i></span>
+          </div>
+          <p class="review">
+            "التطبيق سلس وسريع جداً، ما يتعطل معي أبداً. واجهة المستخدم مرتبة
+            وسهلة، حتى أمي قدرت تطلب بدون مساعدتي! ميزة تتبع الطلب على الخريطة
+            دقيقة بشكل ممتاز."
+          </p>
+        </div>
+        <div class="testimonial">
+          <img src="images/testimonials/testi1.png" alt="testimonials" />
+          <h3>محمد علي</h3>
+          <p class="title-testimonials">مطور برمجيات</p>
+          <div class="stars">
+            <span> <i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-solid fa-star"></i></span>
+            <span><i class="fa-regular fa-star"></i></span>
+            <span> <i class="fa-regular fa-star"></i></span>
+          </div>
+          <p class="review">
+            "التطبيق سلس وسريع جداً، ما يتعطل معي أبداً. واجهة المستخدم مرتبة
+            وسهلة، حتى أمي قدرت تطلب بدون مساعدتي! ميزة تتبع الطلب على الخريطة
+            دقيقة بشكل ممتاز."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- End  Testimonials  section  -->
+
+    <!-- Start  Footer  section  -->
+
+    <footer>
+      <div class="container">
+        <div class="section">
+          <h2>روابط هامة</h2>
+          <ul>
+            <li><a href="">الصفحة الرئيسية</a></li>
+            <li><a href="">تواصل معنا</a></li>
+          </ul>
+        </div>
+        <div class="section">
+          <h2>نبذة عن الشركة</h2>
+          <p>
+            خلال السنوات الأربع الماضية، أنجزت شركة إنفو ستراتيجيك أكثر من 40
+            مشروعًا مع 15 عميلًا داخل دولة الإمارات العربية المتحدة وخارجها، حيث
+            بنت علاقات متينة ونفذت متطلبات دورة حياة المشاريع بالكامل . إضافةً
+            إلى ذلك، لدينا الآن أربعة منتجات تطوير متكاملة.
+          </p>
+        </div>
+        <div class="section">
+          <h2 class="programm">تصميم برمجة الويب</h2>
+          <ul class="programm-ul">
+            <li><a href="">تصميم وبرمجة تطبيقات الجوال</a></li>
+            <li><a href="">إدارة وبرمجة السيرفرات</a></li>
+            <li><a href=""> التسويق الالكتروني</a></li>
+          </ul>
+        </div>
+
+        <div class="section">
+          <h2>النشرة البريدية</h2>
+          <div class="letter">
+            <form>
+              <input type="text" placeholder="الرجاء ادخال الاسم" />
+              <input type="email" placeholder="الرجاء ادخال الايميل" />
+              <input type="submit" value="إرسال البيانات" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr class="hr-footer" />
+      <div class="copyright">
+        <p>Copyright © InfoStrategic</p>
+      </div>
+    </footer>
+
+    <!-- End  Footer  section  -->
+
+    <a href="https://wa.me/00971545621080" class="btn-whatsapp" target="_blank">
+      <i class="fa-brands fa-whatsapp"></i
+    ></a>
+
+    <script src="js/chat.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
